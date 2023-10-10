@@ -2,22 +2,20 @@ package com.ems.emsbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
 public class EmsBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmsBackendApplication.class, args);
 	}
 
+	@GetMapping("/")
+	public String greet() {
+		return "hello";
+	}
+
 }
-// sjndaskdlamnwf
-// afjkaskdnaskdnnllkas
-// afjkaskdnaskdnnllkas
-// afjkaskdnaskdnnllkasd
-// as
-// das
-// d
-// as
-// das
-// d
