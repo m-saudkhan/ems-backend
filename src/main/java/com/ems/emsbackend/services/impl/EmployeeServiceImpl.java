@@ -1,9 +1,6 @@
 package com.ems.emsbackend.services.impl;
 
-import com.ems.emsbackend.services.EmployeeService;
-
 import lombok.AllArgsConstructor;
-
 import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -14,6 +11,7 @@ import com.ems.emsbackend.entity.Employee;
 import com.ems.emsbackend.exception.ResourceNotFoundException;
 import com.ems.emsbackend.mapper.EmployeeMapper;
 import com.ems.emsbackend.repository.EmployeeRepository;
+import com.ems.emsbackend.services.EmployeeService;
 
 @Service
 @AllArgsConstructor
@@ -53,6 +51,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setFirstName(updateEmployee.getFirstName());
         employee.setLastName(updateEmployee.getLastName());
         employee.setEmail(updateEmployee.getEmail());
+        employee.setContact(updateEmployee.getContact());
+        employee.setDepartmentId(updateEmployee.getDepartmentId());
+        employee.setAppointedDate(updateEmployee.getAppointedDate());
 
         Employee updatedEmployeeObj = employeeRepository.save(employee);
 

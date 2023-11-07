@@ -1,5 +1,7 @@
 package com.ems.emsbackend.entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,4 +33,12 @@ public class Employee {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+    @Column(name = "contact")
+    private String contact;
+
+    @Column(name = "departmentId", nullable = true)
+    private int departmentId;
+
+    @Column(name = "appointedDate")
+    private Date appointedDate;
 }

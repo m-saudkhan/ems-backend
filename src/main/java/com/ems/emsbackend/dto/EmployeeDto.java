@@ -1,5 +1,7 @@
 package com.ems.emsbackend.dto;
 
+import java.sql.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,4 +16,7 @@ public class EmployeeDto {
     private String firstName;
     private String lastName;
     private String email;
+    private String contact;
+    private int departmentId;
+    private Date appointedDate;
 }
